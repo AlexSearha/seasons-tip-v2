@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-ink: #07090c;
+  --color-night: #0d1218;
+  --color-slate: #1a2430;
+  --color-steel: #5d7390;
+  --color-mist: #a9b6cc;
+  --color-bone: #e9e6dc;
+  --color-moss: #748e56;
+  --color-rust: #b4492b;
+  --font-cin: var(--font-cinzel), 'Trajan Pro', 'Times New Roman', serif;
+  --font-gar: var(--font-cormorant), 'EB Garamond', Georgia, serif;
+}
+
+html { scroll-behavior: smooth; color-scheme: dark; }
+body { background: var(--color-ink); color: var(--color-bone); font-family: var(--font-gar); font-weight: 500; font-size: 1.35rem; line-height: 1.6; overflow-x: hidden; }
+:focus-visible { outline: 2px solid var(--color-moss); outline-offset: 4px; }
+
+/* Grain de pellicule + vignette sur tout l'écran */
+body::before {
+  content: ''; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: .6; mix-blend-mode: overlay;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .42 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+body::after { content: ''; position: fixed; inset: 0; z-index: 89; pointer-events: none; background: radial-gradient(ellipse at 50% 45%, transparent 40%, rgba(2, 4, 6, .6)); }
+
+.plate { animation: breathe 30s ease-in-out infinite alternate; will-change: transform; }
+@keyframes breathe { from { transform: scale(1.02); } to { transform: scale(1.1); } }
+
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 1.1s, transform 1.1s; }
+.reveal.on { opacity: 1; transform: none; }
+
+.banner-mask { -webkit-mask-image: linear-gradient(#000 62%, transparent); mask-image: linear-gradient(#000 62%, transparent); }
+.fade-y { -webkit-mask-image: linear-gradient(transparent, #000 30%, #000 70%, transparent); mask-image: linear-gradient(transparent, #000 30%, #000 70%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .plate { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
