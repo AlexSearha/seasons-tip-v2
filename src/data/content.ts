@@ -21,7 +21,7 @@ export const episodes: Episode[] = [
     videoId: "8OD-fTqRp2Q",
     fallback: "/images/ep02.jpg",
     blurb:
-      "Là où certains ont choisi d'haïr universellement, j'ai choisi d'ignorer, de m'abstenir et de détacher",
+      "Là où certains ont choisi d'haïr universellement, j'ai choisi d'ignorer, de m'abstenir et de me détacher",
   },
   {
     n: "03",
@@ -29,7 +29,7 @@ export const episodes: Episode[] = [
     videoId: "GxbvnYUR7e4",
     fallback: "/images/ep03.jpg",
     blurb:
-      "Courber l'échine et ne jamais s'arrêter, même si il était tentant de céder et de sombrer, ",
+      "Courber l'échine et ne jamais s'arrêter, même si il était tentant de céder et de sombrer",
   },
   {
     n: "04",
@@ -43,7 +43,7 @@ export const episodes: Episode[] = [
     title: "The Laughing Fool",
     videoId: "_pujliGuxiw",
     fallback: "/images/ep05.jpg",
-    blurb: "Tu as beau jeu de fuir. Mon rire continura à resonner.",
+    blurb: "Tu as beau jeu de fuir. Mon rire continuera à résonner",
   },
 ];
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const chips = [
-  "Symphonique et Metal progressif",
+  "Musique orchestrale et Metal progressif",
   "Visuels dessinés",
   "Chemin initiatique",
 ];
@@ -50,7 +50,7 @@ export default function Hero() {
         <p className="mt-6 max-w-xl text-[clamp(1.3rem,2.2vw,1.65rem)] leading-snug [text-shadow:0_2px_20px_rgba(0,0,0,.8)]">
           Chris fuit la civilisation. Sur sa route, il croise Neil, un vieil
           homme qui arpente les chemins depuis bien longtemps. Ensemble, ils
-          entament un voyage initiatique, dans un monde en ruines que la nature
+          entament un voyage initiatique dans un monde en ruines que la nature
           reprend peu à peu.
         </p>
         <ul className="mt-6 flex flex-wrap justify-center gap-2.5">
